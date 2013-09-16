@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<title>Documento sin título</title>
+</head>
+
+<body>
+  <a href="#" id="vinculo">Click Aqui</a>
+  <div id="cargando" style="display:none; color: #F00;">Cargando...</div>
+	<div id="pagina"></div>
+</body>
+
+<script>
+$(document).ready(function(){
+	$('#vinculo').click(function(event){
+		event.preventDefault();
+		$('#cargando').css("display","inline");
+		$("#pagina").load("php05.php",function(){
+			$('#cargando').css("display","none");
+			});
+		});
+	});
+</script>
+</html>

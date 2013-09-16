@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/jscript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+<title>JQuery 02</title>
+</head>
+
+<body>
+
+<div id="capa" style="padding: 10px; background-color: #ff8800;">Pon el ratón encima de esta capa</div>
+<br>
+<div id="mensaje" style="display: none;">Has puesto el ratón encima!! <br>(Ahora quítalo de la capa)</div>
+
+</body>
+<script type="text/javascript">
+$("#capa").mouseenter(function(evento){
+   $("#mensaje").css("display", "block");
+});
+$("#capa").mouseleave(function(evento){
+   $("#mensaje").css("display", "none");
+});
+</script>
+</html>

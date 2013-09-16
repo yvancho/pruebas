@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style type="text/css">
+.clasecss{
+   background-color: #ff8800;
+   font-weight: bold;
+}
+</style>
+<title>JQ04 - Manejando CSS</title>
+</head>
+
+<body>
+<div id="capa">
+Esta capa es independiente y voy a añadir y eliminar clases css sobre ella
+</div>
+<br>
+<br>
+<a href="http://yvanrocks.blogspot.com/">Página de Yvancho</a>
+</body>
+<script>
+$(document).ready(function(){
+	$('a').mouseover(function(event){
+		$('#capa').addClass('clasecss');
+				
+		});
+	$('a'). mouseout(function(event){
+		$('#capa').removeClass('clasecss');		
+		});
+	});
+</script>
+</html>
